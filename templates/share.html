@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Document</title>
+</head>
+<body>
+    <h1>Share Document</h1>
+
+    <p><strong>Document:</strong> {{ document.original_filename }}</p>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST" action="/share/{{ document.document_id }}">
+        <label for="target_username">Share with username:</label><br>
+        <input type="text" id="target_username" name="target_username" required><br><br>
+
+        <label for="permission">Permission:</label><br>
+        <select id="permission" name="permission" required>
+            <option value="viewer">Viewer</option>
+            <option value="editor">Editor</option>
+        </select><br><br>
+
+        <button type="submit">Share Document</button>
+    </form>
+
+    {% if document.shared_with %}
+        <h2>Currently Shared With</h2>
+        <ul>
+            {% for username, permission in document.shared_with.items() %}
+                <li>{{ username }} — {{ permission }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

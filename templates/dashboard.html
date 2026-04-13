@@ -20,19 +20,36 @@
 
     <h2>Your Documents</h2>
 
-    {% if documents %}
+    {% if owned_documents %}
         <ul>
-            {% for doc in documents %}
+            {% for doc in owned_documents %}
                 <li>
                     {{ doc.original_filename }} |
                     Version: {{ doc.version }} |
-                    Uploaded At: {{ doc.uploaded_at }} |
-                    <a href="/download/{{ doc.document_id }}">Download</a>
+                    <a href="/download/{{ doc.document_id }}">Download</a> |
+                    <a href="/share/{{ doc.document_id }}">Share</a>
                 </li>
             {% endfor %}
         </ul>
     {% else %}
         <p>No documents uploaded yet.</p>
+    {% endif %}
+
+    <h2>Documents Shared With You</h2>
+
+    {% if shared_documents %}
+        <ul>
+            {% for doc in shared_documents %}
+                <li>
+                    {{ doc.original_filename }} |
+                    Owner: {{ doc.owner }} |
+                    Your Permission: {{ doc.shared_with[current_user] }} |
+                    <a href="/download/{{ doc.document_id }}">Download</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents have been shared with you yet.</p>
     {% endif %}
 
     <a href="/">Home</a><br><br>

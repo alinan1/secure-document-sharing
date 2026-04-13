@@ -152,6 +152,31 @@ def destroy_session(token):
         save_json(app.config["SESSIONS_FILE"], sessions)
 
 
+def get_user_owned_documents(username):
+    documents = load_json(app.config["DOCUMENTS_FILE"], {})
+    return [doc for doc in documents.values() if doc["owner"] == username]
+
+
+def get_user_shared_documents(username):
+    documents = load_json(app.config["DOCUMENTS_FILE"], {})
+    shared_docs = []
+
+    for doc in documents.values():
+        shared_with = doc.get("shared_with", {})
+        if username in shared_with and doc["owner"] != username:
+            shared_docs.append(doc)
+
+    return shared_docs
+
+
+def can_user_access_document(document, username):
+    if document["owner"] == username:
+        return True
+
+    shared_with = document.get("shared_with", {})
+    return username in shared_with
+
+
 ensure_directories()
 ensure_json_files()
 load_or_create_encryption_key()
@@ -293,16 +318,17 @@ def dashboard():
         return redirect(url_for("login"))
 
     users = load_json(app.config["USERS_FILE"], {})
-    documents = load_json(app.config["DOCUMENTS_FILE"], {})
-    user_documents = [doc for doc in documents.values() if doc["owner"] == g.user]
-
     user_data = users.get(g.user)
+
+    owned_documents = get_user_owned_documents(g.user)
+    shared_documents = get_user_shared_documents(g.user)
 
     return render_template(
         "dashboard.html",
         current_user=g.user,
         user_data=user_data,
-        documents=user_documents
+        owned_documents=owned_documents,
+        shared_documents=shared_documents
     )
 
 
@@ -357,6 +383,50 @@ def upload():
     return render_template("upload.html", message=message)
 
 
+@app.route("/share/<document_id>", methods=["GET", "POST"])
+def share(document_id):
+    if not g.user:
+        return redirect(url_for("login"))
+
+    documents = load_json(app.config["DOCUMENTS_FILE"], {})
+    users = load_json(app.config["USERS_FILE"], {})
+
+    if document_id not in documents:
+        abort(404)
+
+    document = documents[document_id]
+
+    if document["owner"] != g.user:
+        abort(403)
+
+    message = ""
+
+    if request.method == "POST":
+        target_username = request.form.get("target_username", "").strip()
+        permission = request.form.get("permission", "").strip().lower()
+
+        if target_username == "":
+            message = "Please enter a username."
+        elif target_username not in users:
+            message = "That user does not exist."
+        elif target_username == g.user:
+            message = "You cannot share a document with yourself."
+        elif permission not in ["viewer", "editor"]:
+            message = "Invalid permission selected."
+        else:
+            document["shared_with"][target_username] = permission
+            documents[document_id] = document
+            save_json(app.config["DOCUMENTS_FILE"], documents)
+            message = f"Document shared with {target_username} as {permission}."
+
+    return render_template(
+        "share.html",
+        current_user=g.user,
+        document=document,
+        message=message
+    )
+
+
 @app.route("/download/<document_id>")
 def download(document_id):
     if not g.user:
@@ -369,7 +439,7 @@ def download(document_id):
 
     document = documents[document_id]
 
-    if document["owner"] != g.user:
+    if not can_user_access_document(document, g.user):
         abort(403)
 
     file_path = os.path.join(app.config["UPLOAD_DIR"], document["stored_filename"])
