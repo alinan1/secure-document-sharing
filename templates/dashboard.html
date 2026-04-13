@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+    <p>Welcome, <strong>{{ current_user }}</strong>.</p>
+
+    {% if user_data %}
+        <p>Email: {{ user_data.email }}</p>
+        <p>Role: {{ user_data.role }}</p>
+        <p>Failed Attempts: {{ user_data.failed_attempts }}</p>
+    {% endif %}
+
+    <a href="/upload">Upload a Document</a><br><br>
+
+    <h2>Your Documents</h2>
+
+    {% if documents %}
+        <ul>
+            {% for doc in documents %}
+                <li>
+                    {{ doc.original_filename }} |
+                    Version: {{ doc.version }} |
+                    Uploaded At: {{ doc.uploaded_at }} |
+                    <a href="/download/{{ doc.document_id }}">Download</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents uploaded yet.</p>
+    {% endif %}
+
+    <a href="/">Home</a><br><br>
+    <a href="/logout">Logout</a>
+</body>
+</html>
