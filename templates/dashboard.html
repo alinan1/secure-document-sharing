@@ -25,9 +25,11 @@
             {% for doc in owned_documents %}
                 <li>
                     {{ doc.original_filename }} |
-                    Version: {{ doc.version }} |
+                    Current Version: {{ doc.version }} |
                     <a href="/download/{{ doc.document_id }}">Download</a> |
-                    <a href="/share/{{ doc.document_id }}">Share</a>
+                    <a href="/share/{{ doc.document_id }}">Share</a> |
+                    <a href="/new-version/{{ doc.document_id }}">Upload New Version</a> |
+                    <a href="/audit/{{ doc.document_id }}">View Audit Trail</a>
                 </li>
             {% endfor %}
         </ul>
@@ -44,7 +46,12 @@
                     {{ doc.original_filename }} |
                     Owner: {{ doc.owner }} |
                     Your Permission: {{ doc.shared_with[current_user] }} |
-                    <a href="/download/{{ doc.document_id }}">Download</a>
+                    Current Version: {{ doc.version }} |
+                    <a href="/download/{{ doc.document_id }}">Download</a> |
+                    {% if doc.shared_with[current_user] == "editor" %}
+                        <a href="/new-version/{{ doc.document_id }}">Upload New Version</a> |
+                    {% endif %}
+                    <a href="/audit/{{ doc.document_id }}">View Audit Trail</a>
                 </li>
             {% endfor %}
         </ul>

@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "timestamp": 1776140030.0119798,
+        "username": "mina_new123",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    }
+]

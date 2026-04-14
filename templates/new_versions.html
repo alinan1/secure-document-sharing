@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload New Version</title>
+</head>
+<body>
+    <h1>Upload New Version</h1>
+
+    <p><strong>Document:</strong> {{ document.original_filename }}</p>
+    <p><strong>Current Version:</strong> {{ document.version }}</p>
+
+    {% if message %}
+        <p><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST" action="/new-version/{{ document.document_id }}" enctype="multipart/form-data">
+        <label for="document">Choose replacement file:</label><br><br>
+        <input type="file" id="document" name="document" required><br><br>
+
+        <button type="submit">Upload New Version</button>
+    </form>
+
+    {% if document.versions %}
+        <h2>Version History</h2>
+        <ul>
+            {% for version in document.versions %}
+                <li>
+                    Version {{ version.version_number }} |
+                    Filename: {{ version.original_filename }} |
+                    Uploaded By: {{ version.uploaded_by }} |
+                    Uploaded At: {{ version.uploaded_at }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

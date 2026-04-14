@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Trail</title>
+</head>
+<body>
+    <h1>Audit Trail</h1>
+
+    <p><strong>Document:</strong> {{ document.original_filename }}</p>
+    <p><strong>Current Version:</strong> {{ document.version }}</p>
+
+    {% if events %}
+        <ul>
+            {% for event in events %}
+                <li>
+                    Time: {{ event.timestamp }} |
+                    User: {{ event.username }} |
+                    Action: {{ event.action }} |
+                    Details: {{ event.details }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No audit events found for this document.</p>
+    {% endif %}
+
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

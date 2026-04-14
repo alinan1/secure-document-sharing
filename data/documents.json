@@ -6,7 +6,9 @@
         "stored_filename": "4c8dc0537e9abc19.pdf",
         "uploaded_at": 1776062838.9680378,
         "version": 1,
-        "shared_with": {}
+        "shared_with": {
+            "mimiiiii": "viewer"
+        }
     },
     "55cf4d1727e48a4f": {
         "document_id": "55cf4d1727e48a4f",
@@ -34,5 +36,16 @@
         "uploaded_at": 1776064277.5164132,
         "version": 1,
         "shared_with": {}
+    },
+    "ed6aae16aa77c61f": {
+        "document_id": "ed6aae16aa77c61f",
+        "owner": "mimiiiii",
+        "original_filename": "f1098t_pdf.php.pdf",
+        "stored_filename": "ed6aae16aa77c61f.enc",
+        "uploaded_at": 1776116608.5699682,
+        "version": 1,
+        "shared_with": {
+            "mina_new123": "editor"
+        }
     }
 }

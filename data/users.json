@@ -5,7 +5,7 @@
         "password_hash": "$2b$12$rhNjYGNtBa15WjlyBYKz3eU2Xix3VEag6vxiZy.anMKPe7wumKT9y",
         "created_at": 1775697575.9535563,
         "role": "user",
-        "failed_attempts": 2,
+        "failed_attempts": 0,
         "locked_until": null
     },
     "mina_new123": {
