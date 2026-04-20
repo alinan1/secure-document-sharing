@@ -33,7 +33,7 @@ openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 36
 5. <b>Run the application:</b>
 python app.py  
 
-6. Open in browser:
+6. <b>Open in browser:</b>
 https://127.0.0.1:5000  
 
 Note: You may see a browser warning due to the self-signed certificate 
