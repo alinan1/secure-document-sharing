@@ -15,7 +15,7 @@ It features Role Based access controls and allows users to upload, encrypt, stor
 
 ## Setup Instructions
 
-1. **Clone the repository: **
+1. <b>Clone the repository:</b>
 git clone https://github.com/alinan1/secure-document-sharing.git  
 cd secure-document-sharing  
 
