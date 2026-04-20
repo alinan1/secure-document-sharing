@@ -1,10 +1,8 @@
 # Secure Document Sharing System
 
 ## Overview
-This project is a secure document sharing web application built with Flask.  
-It allows users to upload, encrypt, store, and share documents with controlled access.
-
----
+This project is a secure document sharing web application built with Python Flask and uses HTML + CSS. 
+It features Role Based access controls and allows users to upload, encrypt, store, and share documents.
 
 ## Features
 - User authentication (login/register)
@@ -15,27 +13,27 @@ It allows users to upload, encrypt, store, and share documents with controlled a
 - Audit trail and security logging
 - HTTPS support (TLS encryption)
 
----
-
 ## Setup Instructions
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/alinan1/secure-document-sharing.git
-cd secure-document-sharing
+1. Clone the repository:
+git clone https://github.com/alinan1/secure-document-sharing.git  
+cd secure-document-sharing  
 
-### Create Virtual Environment
-python3 -m venv venv
-source venv/bin/activate   # Mac/Linux
-# or
-venv\Scripts\activate      # Windows
+2. Create a virtual environment:
+python3 -m venv venv  
+source venv/bin/activate   (Mac/Linux)  
+venv\Scripts\activate      (Windows)  
 
-### Install requirements
-git commit -m "Removed sensitive SSL files"
+3. Install dependencies:
+pip install -r requirements.txt  
 
-### Generate SSL Certificate for HTTPS
-openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
+4. Generate SSL certificate (for HTTPS):
+openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365  
 
-### Run code
-python app.py
+5. Run the application:
+python app.py  
 
+6. Open in browser:
+https://127.0.0.1:5000  
+
+Note: You may see a browser warning due to the self-signed certificate 
