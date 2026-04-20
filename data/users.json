@@ -16,5 +16,41 @@
         "role": "user",
         "failed_attempts": 0,
         "locked_until": null
+    },
+    "alina": {
+        "username": "alina",
+        "email": "alina123@gmail.com",
+        "password_hash": "$2b$12$sxGVYK6VzPPmK.uzAcOAYOLovtRFzxhXtsTpYz93sRKXMZky21nLC",
+        "created_at": 1776196290.432534,
+        "role": "admin",
+        "failed_attempts": 2,
+        "locked_until": null
+    },
+    "alina2": {
+        "username": "alina2",
+        "email": "alina222@test.com",
+        "password_hash": "$2b$12$tb1UGbnqUbnz5OY6DCTVm.u/zDrG2GM502Lw5zjKBYw1sSmrD7NeC",
+        "created_at": 1776217450.6388328,
+        "role": "user",
+        "failed_attempts": 0,
+        "locked_until": null
+    },
+    "alinathegoat": {
+        "username": "alinathegoat",
+        "email": "goat@icloud.com",
+        "password_hash": "$2b$12$7JZDKw6aW2uDCzagVmkPcOqVJY9yGhdC9/jt6PIPP5IlKG4EKx96G",
+        "created_at": 1776495764.912599,
+        "role": "user",
+        "failed_attempts": 0,
+        "locked_until": null
+    },
+    "nesi": {
+        "username": "nesi",
+        "email": "nesi@yahoo.com",
+        "password_hash": "$2b$12$R3rTXVtIH0IvP.eRNCk3ZuJPxRsD.xhA.WsGnhz8HV/xeMGgruGCa",
+        "created_at": 1776651671.252259,
+        "role": "user",
+        "failed_attempts": 0,
+        "locked_until": null
     }
 }

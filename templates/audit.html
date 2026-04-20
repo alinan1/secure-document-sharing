@@ -7,23 +7,22 @@
 </head>
 <body>
     <h1>Audit Trail</h1>
-
     <p><strong>Document:</strong> {{ document.original_filename }}</p>
-    <p><strong>Current Version:</strong> {{ document.version }}</p>
+    <p><strong>Version:</strong> {{ document.version }}</p>
 
     {% if events %}
         <ul>
             {% for event in events %}
                 <li>
-                    Time: {{ event.timestamp }} |
-                    User: {{ event.username }} |
-                    Action: {{ event.action }} |
+                    User: {{ event.username }} --
+                    Time: {{ event.timestamp }} --
+                    Action: {{ event.action }} --
                     Details: {{ event.details }}
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p>No audit events found for this document.</p>
+        <p>No audit trail found</p>
     {% endif %}
 
     <a href="/dashboard">Back to Dashboard</a>

@@ -4,18 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Document Sharing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <h1>Secure Document Sharing System</h1>
+<body class="bodcolor">
+    <div class="center">
+        <div class="card">
+        <h1>Secure Document Sharing System</h1>
 
-    {% if current_user %}
-        <p>You are logged in as <strong>{{ current_user }}</strong>.</p>
-        <a href="/dashboard">Go to Dashboard</a><br><br>
-        <a href="/logout">Logout</a>
-    {% else %}
-        <p>You are not logged in.</p>
-        <a href="/register">Go to Register Page</a><br><br>
-        <a href="/login">Go to Login Page</a>
-    {% endif %}
+        {% if user %}
+            <p>You are logged in as <strong>{{ user }}</strong>.</p>
+
+            <div class="button-group">
+                <a class="btn" href="/dashboard">Go to Dashboard</a>
+                <a class="btn" href="/logout">Logout</a>
+            </div>
+        {% else %}
+            <p>You are not logged in</p>
+            <div class="button-group">
+                <a class="btn" href="/login">Login</a>
+                <a class="btn" href="/register">Register</a>
+            </div>
+        {% endif %}
+        
+        </div>
+    </div>
 </body>
 </html>

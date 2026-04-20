@@ -7,5 +7,734 @@
         "details": {
             "ip": "127.0.0.1"
         }
+    },
+    {
+        "timestamp": 1776196294.217319,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776198546.672748,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776198570.8021739,
+        "username": "alina",
+        "action": "UPLOAD_DOCUMENT",
+        "document_id": "ebb0a0e0769c504a",
+        "details": {
+            "filename": "SAMPLE_MIDTERM_1.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776198589.957074,
+        "username": "alina",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "ebb0a0e0769c504a",
+        "details": {
+            "shared_with": "mina_new123",
+            "permission": "viewer"
+        }
+    },
+    {
+        "timestamp": 1776198606.230571,
+        "username": "alina",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "ebb0a0e0769c504a",
+        "details": {
+            "shared_with": "mina_new123",
+            "permission": "viewer"
+        }
+    },
+    {
+        "timestamp": 1776217335.8679192,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776217365.843311,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776217454.573133,
+        "username": "alina2",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776217474.713202,
+        "username": "alina2",
+        "action": "UPLOAD_DOCUMENT",
+        "document_id": "f950831e957a973d",
+        "details": {
+            "filename": "Lecture_1_.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776217485.0279171,
+        "username": "alina2",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "f950831e957a973d",
+        "details": {
+            "shared_with": "alina",
+            "permission": "editor"
+        }
+    },
+    {
+        "timestamp": 1776217490.509666,
+        "username": "alina2",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776217494.409909,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776217718.006542,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776366937.250321,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776367151.331681,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776368223.396597,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776368374.573052,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776369915.951763,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776370071.2074308,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776370074.346774,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776370180.4848168,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776370340.2340028,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776370342.716146,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776370366.196595,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776370534.079425,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776370919.905983,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776370933.6113348,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776487056.033549,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776487098.0521128,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776487288.2089899,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776487474.450687,
+        "username": "alina",
+        "action": "ADMIN_DASHBOARD_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776487538.9834518,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776487727.599401,
+        "username": "alina",
+        "action": "DOWNLOAD_DOCUMENT",
+        "document_id": "ebb0a0e0769c504a",
+        "details": {
+            "filename": "SAMPLE_MIDTERM_1.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776487734.491609,
+        "username": "alina",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "ebb0a0e0769c504a",
+        "details": {
+            "shared_with": "mina_new123",
+            "permission": "viewer"
+        }
+    },
+    {
+        "timestamp": 1776487738.40704,
+        "username": "alina",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "ebb0a0e0769c504a",
+        "details": {
+            "shared_with": "mina_new123",
+            "permission": "editor"
+        }
+    },
+    {
+        "timestamp": 1776488537.9103239,
+        "username": "alina",
+        "action": "DELETE_DOCUMENT",
+        "document_id": "ebb0a0e0769c504a",
+        "details": {
+            "filename": "SAMPLE_MIDTERM_1.pdf"
+        }
+    },
+    {
+        "timestamp": 1776489633.117703,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776489650.878145,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776489657.017195,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490007.660865,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490009.130782,
+        "username": "alina",
+        "action": "ADMIN_LOCK_USER",
+        "document_id": null,
+        "details": {
+            "target": "mimiiiii"
+        }
+    },
+    {
+        "timestamp": 1776490009.13428,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490010.755235,
+        "username": "alina",
+        "action": "ADMIN_LOCK_USER",
+        "document_id": null,
+        "details": {
+            "target": "mimiiiii"
+        }
+    },
+    {
+        "timestamp": 1776490010.763745,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490011.339444,
+        "username": "alina",
+        "action": "ADMIN_UNLOCK_USER",
+        "document_id": null,
+        "details": {
+            "target": "mimiiiii"
+        }
+    },
+    {
+        "timestamp": 1776490011.3479638,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490016.021824,
+        "username": "alina",
+        "action": "ADMIN_LOCK_USER",
+        "document_id": null,
+        "details": {
+            "target": "alina2"
+        }
+    },
+    {
+        "timestamp": 1776490016.0303638,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490017.371305,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490020.823199,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490043.388753,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776490044.993463,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490189.960694,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776490202.473293,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490205.086259,
+        "username": "alina",
+        "action": "ADMIN_UNLOCK_USER",
+        "document_id": null,
+        "details": {
+            "target": "alina"
+        }
+    },
+    {
+        "timestamp": 1776490205.095147,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490206.852866,
+        "username": "alina",
+        "action": "ADMIN_UNLOCK_USER",
+        "document_id": null,
+        "details": {
+            "target": "alina2"
+        }
+    },
+    {
+        "timestamp": 1776490206.8615592,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490208.003828,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490211.385275,
+        "username": "alina",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776490215.136738,
+        "username": "alina2",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776490223.449754,
+        "username": "alina2",
+        "action": "DOWNLOAD_DOCUMENT",
+        "document_id": "f950831e957a973d",
+        "details": {
+            "filename": "Lecture_1_.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776491101.24569,
+        "username": "alina2",
+        "action": "UPLOAD_NEW_VERSION",
+        "document_id": "f950831e957a973d",
+        "details": {
+            "version": 2,
+            "filename": "IT_cover_letter.pdf"
+        }
+    },
+    {
+        "timestamp": 1776491115.83987,
+        "username": "alina2",
+        "action": "DELETE_DOCUMENT",
+        "document_id": "f950831e957a973d",
+        "details": {
+            "filename": "IT_cover_letter.pdf"
+        }
+    },
+    {
+        "timestamp": 1776491127.5510762,
+        "username": "alina2",
+        "action": "UPLOAD_DOCUMENT",
+        "document_id": "352114f26e453f84",
+        "details": {
+            "filename": "IT_cover_letter.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776491262.683945,
+        "username": "alina2",
+        "action": "UPLOAD_DOCUMENT",
+        "document_id": "5673b4252d75e575",
+        "details": {
+            "filename": "Lecture-9A9B-Reciation-questions.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776491277.3135371,
+        "username": "alina2",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776492710.5996811,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776492716.8536751,
+        "username": "alina",
+        "action": "ADMIN_VIEW_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776492834.56424,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776492878.796586,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776494358.4257548,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776495690.301812,
+        "username": "alina",
+        "action": "LOGIN_FAILED",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776495783.2570372,
+        "username": "alinathegoat",
+        "action": "LOGIN_FAILED",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776495792.8169138,
+        "username": "alinathegoat",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776495812.5726001,
+        "username": "alinathegoat",
+        "action": "UPLOAD_DOCUMENT",
+        "document_id": "1062e474d307f4e2",
+        "details": {
+            "filename": "Lecture_5_AB_.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776495817.337827,
+        "username": "alinathegoat",
+        "action": "DOWNLOAD_DOCUMENT",
+        "document_id": "1062e474d307f4e2",
+        "details": {
+            "filename": "Lecture_5_AB_.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776495826.380255,
+        "username": "alinathegoat",
+        "action": "DELETE_DOCUMENT",
+        "document_id": "1062e474d307f4e2",
+        "details": {
+            "filename": "Lecture_5_AB_.pdf"
+        }
+    },
+    {
+        "timestamp": 1776636287.756765,
+        "username": "alina",
+        "action": "LOGIN_FAILED",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776651681.2328289,
+        "username": "nesi",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776651702.469562,
+        "username": "nesi",
+        "action": "UPLOAD_DOCUMENT",
+        "document_id": "63f44fee8b74cf31",
+        "details": {
+            "filename": "puzzle.pdf",
+            "version": 1
+        }
+    },
+    {
+        "timestamp": 1776651748.333397,
+        "username": "nesi",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "63f44fee8b74cf31",
+        "details": {
+            "shared_with": "alina",
+            "permission": "editor"
+        }
+    },
+    {
+        "timestamp": 1776651920.632096,
+        "username": "nesi",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "63f44fee8b74cf31",
+        "details": {
+            "shared_with": "alina",
+            "permission": "editor"
+        }
+    },
+    {
+        "timestamp": 1776651938.990415,
+        "username": "nesi",
+        "action": "SHARE_DOCUMENT",
+        "document_id": "63f44fee8b74cf31",
+        "details": {
+            "shared_with": "alina",
+            "permission": "editor"
+        }
+    },
+    {
+        "timestamp": 1776656689.9277928,
+        "username": "nesi",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776656701.532535,
+        "username": "nesi",
+        "action": "DOWNLOAD_DOCUMENT",
+        "document_id": "63f44fee8b74cf31",
+        "details": {
+            "filename": "puzzle.pdf",
+            "version": 1
+        }
     }
 ]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+<p>Logged in as: {{ current_user }}</p>
+
+<h2>All Users In System: </h2>
+<ul>
+    {% for username, user in users.items() %}
+        <li>{{ username }} (Role: {{ user.role }})</li>
+    {% endfor %}
+</ul>
+
+<h2>All Documents</h2>
+<ul>
+    {% for doc in documents.values() %}
+        <li>{{ doc.original_filename }} Owner: {{ doc.owner }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <h1>Register</h1>
+<body class="bodcolor">
+    <div class="center">
+        <div class="card">
+            <h1>Register</h1>
 
-    {% if message %}
-        <p><strong>{{ message }}</strong></p>
-    {% endif %}
+            {% if message %}
+                <p class="message">{{ message }}</p>
+            {% endif %}
+            <form class="space" method="POST" action="/register">
 
-    {% if not success %}
-    <form method="POST" action="/register">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" value="{{ username|default('') }}" required><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" value="{{ email|default('') }}" required><br><br>
+                <label>Username</label>
+                <input type="text" name="username" required> 
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+                <label>Email</label>
+                <input type="text" name="email" required>
 
-        <label for="confirm_password">Confirm Password:</label><br>
-        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+                <label>Password</label>
+                <input type="password" name="password" required>
 
-        <button type="submit">Register</button>
-    </form>
-    {% endif %}
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" required>
 
-    <br>
-    <a href="/">Back to Home</a>
+                <button class="btn" type="submit">Register</button>
+
+                
+            </form>
+
+            <div class="button-group">
+                {% if current_user %}
+                    <a class="btn" href="/dashboard">Back to Dashboard</a>
+                {% endif %}
+                <a class="btn" href="/login">Login</a>
+                <a class="btn" href="/Home">Home</a>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>

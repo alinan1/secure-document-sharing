@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Document</title>
+</head>
+<body>
+
+<h1>Document View</h1>
+
+    <p><strong>Filename:</strong> {{ document.original_filename }}</p>
+    <p><strong>Owner:</strong> {{ document.owner }}</p>
+    <p><strong>Version:</strong> {{ document.version }}</p>
+
+    {% if current_user %}
+        <p>You are logged in as {{ current_user }}</p>
+    {% else %}
+        <p>You are viewing as guest - READ ONLY</p>
+    {% endif %}
+    <a href="/">Home</a>
+
+</body>
+</html>

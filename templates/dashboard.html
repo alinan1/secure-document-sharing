@@ -19,17 +19,20 @@
     <a href="/upload">Upload a Document</a><br><br>
 
     <h2>Your Documents</h2>
-
     {% if owned_documents %}
         <ul>
             {% for doc in owned_documents %}
-                <li>
+                <li type=1>
                     {{ doc.original_filename }} |
                     Current Version: {{ doc.version }} |
+                    <a href="/newversion/{{ doc.document_id }}">Upload New Version</a> |
                     <a href="/download/{{ doc.document_id }}">Download</a> |
                     <a href="/share/{{ doc.document_id }}">Share</a> |
-                    <a href="/new-version/{{ doc.document_id }}">Upload New Version</a> |
                     <a href="/audit/{{ doc.document_id }}">View Audit Trail</a>
+
+                    <form action="/delete/{{ doc.document_id }}" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                    </form>
                 </li>
             {% endfor %}
         </ul>
@@ -38,7 +41,6 @@
     {% endif %}
 
     <h2>Documents Shared With You</h2>
-
     {% if shared_documents %}
         <ul>
             {% for doc in shared_documents %}

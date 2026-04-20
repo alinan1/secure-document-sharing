@@ -47,5 +47,63 @@
         "shared_with": {
             "mina_new123": "editor"
         }
+    },
+    "352114f26e453f84": {
+        "document_id": "352114f26e453f84",
+        "owner": "alina2",
+        "original_filename": "IT_cover_letter.pdf",
+        "stored_filename": "352114f26e453f84_v1.enc",
+        "uploaded_at": 1776491127.550443,
+        "version": 1,
+        "shared_with": {},
+        "versions": [
+            {
+                "version_number": 1,
+                "stored_filename": "352114f26e453f84_v1.enc",
+                "uploaded_at": 1776491127.550443,
+                "uploaded_by": "alina2",
+                "original_filename": "IT_cover_letter.pdf"
+            }
+        ]
+    },
+    "5673b4252d75e575": {
+        "document_id": "5673b4252d75e575",
+        "owner": "alina2",
+        "original_filename": "Lecture-9A9B-Reciation-questions.pdf",
+        "stored_filename": "5673b4252d75e575_v1.enc",
+        "uploaded_at": 1776491262.68282,
+        "version": 1,
+        "shared_with": {
+            "guest": "viewer"
+        },
+        "versions": [
+            {
+                "version_number": 1,
+                "stored_filename": "5673b4252d75e575_v1.enc",
+                "uploaded_at": 1776491262.68282,
+                "uploaded_by": "alina2",
+                "original_filename": "Lecture-9A9B-Reciation-questions.pdf"
+            }
+        ]
+    },
+    "63f44fee8b74cf31": {
+        "document_id": "63f44fee8b74cf31",
+        "owner": "nesi",
+        "original_filename": "puzzle.pdf",
+        "stored_filename": "63f44fee8b74cf31_v1.enc",
+        "uploaded_at": 1776651702.4687371,
+        "version": 1,
+        "shared_with": {
+            "alina": "editor"
+        },
+        "versions": [
+            {
+                "version_number": 1,
+                "stored_filename": "63f44fee8b74cf31_v1.enc",
+                "uploaded_at": 1776651702.4687371,
+                "uploaded_by": "nesi",
+                "original_filename": "puzzle.pdf"
+            }
+        ]
     }
 }

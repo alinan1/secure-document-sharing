@@ -6,8 +6,7 @@
     <title>Share Document</title>
 </head>
 <body>
-    <h1>Share Document</h1>
-
+    <h1>Share Documents</h1>
     <p><strong>Document:</strong> {{ document.original_filename }}</p>
 
     {% if message %}
@@ -15,7 +14,8 @@
     {% endif %}
 
     <form method="POST" action="/share/{{ document.document_id }}">
-        <label for="target_username">Share with username:</label><br>
+
+        <label for="target_username">Share with:</label><br>
         <input type="text" id="target_username" name="target_username" required><br><br>
 
         <label for="permission">Permission:</label><br>
@@ -23,19 +23,17 @@
             <option value="viewer">Viewer</option>
             <option value="editor">Editor</option>
         </select><br><br>
-
         <button type="submit">Share Document</button>
-    </form>
 
+    </form>
     {% if document.shared_with %}
-        <h2>Currently Shared With</h2>
+        <h2>SHARED USERS:</h2>
         <ul>
             {% for username, permission in document.shared_with.items() %}
-                <li>{{ username }} — {{ permission }}</li>
+                <li>User: {{ username }} -- Permission: {{ permission }}</li>
             {% endfor %}
         </ul>
     {% endif %}
-
-    <a href="/dashboard">Back to Dashboard</a>
+    <a href="/dashboard">Go Back to Dashboard</a>
 </body>
 </html>
