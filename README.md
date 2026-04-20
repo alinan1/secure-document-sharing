@@ -15,19 +15,19 @@ It features Role Based access controls and allows users to upload, encrypt, stor
 
 ## Setup Instructions
 
-1. Clone the repository:
+1. **Clone the repository: **
 git clone https://github.com/alinan1/secure-document-sharing.git  
 cd secure-document-sharing  
 
-2. Create a virtual environment:
+2.  **Create a virtual environment: **
 python3 -m venv venv  
 source venv/bin/activate   (Mac/Linux)  
 venv\Scripts\activate      (Windows)  
 
-3. Install dependencies:
+3.  **Install dependencies: **
 pip install -r requirements.txt  
 
-4. Delete current cert.pem and key.pem files and Generate new SSL certificate (for HTTPS):
+4.  **Delete current cert.pem and key.pem files and Generate new SSL certificate (for HTTPS): **
 openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365  
 
 5. Run the application:
