@@ -27,7 +27,7 @@ venv\Scripts\activate      (Windows)
 3. <b>Install dependencies:</b>
 pip install -r requirements.txt  
 
-4. <b>Delete current cert.pem and key.pem files and Generate new SSL certificate (for HTTPS):</b>
+4. <b>Generate new SSL certificate (for HTTPS):</b>
 openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365  
 
 5. <b>Run the application:</b>
