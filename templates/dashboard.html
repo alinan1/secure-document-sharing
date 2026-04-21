@@ -51,7 +51,7 @@
                     Current Version: {{ doc.version }} |
                     <a href="/download/{{ doc.document_id }}">Download</a> |
                     {% if doc.shared_with[current_user] == "editor" %}
-                        <a href="/new-version/{{ doc.document_id }}">Upload New Version</a> |
+                        <a href="/newversion/{{ doc.document_id }}">Upload New Version</a> |
                     {% endif %}
                     <a href="/audit/{{ doc.document_id }}">View Audit Trail</a>
                 </li>
