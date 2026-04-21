@@ -1037,25 +1037,29 @@ def admin_unlock_user(username):
 @require_role("admin")
 def admin_reset_password(username):
     allusers = load_json(app.config["USERS_FILE"], {})
-
+    #check if user exists
     if username not in allusers:
         abort(404)
 
+    #new password is name of input field 
+    #.get retrieves from html form
+    #strip is just so no whitespace
     newpassword = request.form.get("newpassword", "").strip()
 
+    #kis password empy then bad req
     if not newpassword:
         abort(400)
 
-    # hash the new password (same way you do in register)
+    #otherwise hash passwors and store ...
+    # hash the new password same way done before
     salt = bcrypt.gensalt(rounds=12)
     hashed_password = bcrypt.hashpw(newpassword.encode("utf-8"), salt)
 
-    # store it
-    allusers[username]["password_hash"] = hashed_password.decode("utf-8")
-    allusers[username]["failed_attempts"] = 0
-    allusers[username]["locked_until"] = None
+    allusers[username]["password_hash"] = hashed_password.decode("utf-8") #store newpassowrd, decode turns bytes into string for json file
+    allusers[username]["failed_attempts"] = 0 #resets login attempts --> so user isnt locked out anymore after reset
+    allusers[username]["locked_until"] = None #unlocks account by removing time limit
 
-    save_json(app.config["USERS_FILE"],allusers)
+    save_json(app.config["USERS_FILE"],allusers) #save updated user
 
     log_audit_event(g.user, "ADMIN_RESET_PASSWORD", details={"target": username})
     log_security_event("ADMIN_RESET_PASSWORD", username=g.user, details={"target": username})
