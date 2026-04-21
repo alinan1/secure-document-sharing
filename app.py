@@ -987,11 +987,11 @@ def admin_dashboard():
 @app.route("/admin/manage-users")
 @require_auth
 @require_role("admin")
-def admin_users():
+def admin_manageusers():
     users = load_json(app.config["USERS_FILE"], {})
 
     log_audit_event(g.user, "ADMIN_VIEW_MANAGE_USERS")
-    return render_template("admin_users.html", current_user=g.user, users=users)
+    return render_template("admin_manageusers.html", current_user=g.user, users=users)
 
 #------ADMIN LOCK USER------
 # Used for when LOCK button pressed / route
@@ -1010,7 +1010,7 @@ def admin_lock_user(username):
 
     log_audit_event(g.user, "ADMIN_LOCK_USER", details={"target": username})
     log_security_event("ADMIN_LOCK_USER", username=g.user, details={"target": username}, severity="WARNING")
-    return redirect(url_for("admin_users"))
+    return redirect(url_for("admin_manageusers"))
 
 #----ADMINN UNLOCK------
 #Used for when unlocked buton press
@@ -1029,6 +1029,37 @@ def admin_unlock_user(username):
 
     log_audit_event(g.user, "ADMIN_UNLOCK_USER", details={"target": username})
     log_security_event("ADMIN_UNLOCK_USER", username=g.user, details={"target": username})
+    return redirect(url_for("admin_manageusers"))
+
+#--------ADMIN RESET PASSWORD--------
+@app.route("/admin/manage-users/<username>/resetpassword", methods=["POST"])
+@require_auth
+@require_role("admin")
+def admin_reset_password(username):
+    allusers = load_json(app.config["USERS_FILE"], {})
+
+    if username not in allusers:
+        abort(404)
+
+    newpassword = request.form.get("newpassword", "").strip()
+
+    if not newpassword:
+        abort(400)
+
+    # hash the new password (same way you do in register)
+    salt = bcrypt.gensalt(rounds=12)
+    hashed_password = bcrypt.hashpw(newpassword.encode("utf-8"), salt)
+
+    # store it
+    allusers[username]["password_hash"] = hashed_password.decode("utf-8")
+    allusers[username]["failed_attempts"] = 0
+    allusers[username]["locked_until"] = None
+
+    save_json(app.config["USERS_FILE"],allusers)
+
+    log_audit_event(g.user, "ADMIN_RESET_PASSWORD", details={"target": username})
+    log_security_event("ADMIN_RESET_PASSWORD", username=g.user, details={"target": username})
+
     return redirect(url_for("admin_users"))
 
 #-------- VIEW FOR GUEST USERS--------

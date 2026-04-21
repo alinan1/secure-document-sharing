@@ -19,10 +19,18 @@
                 <button type="submit">Unlock</button>
             </form>
 
+            <form action="/admin/manage-users/{{ username }}/resetpassword" method="POST" style="display:inline;">
+                <input type="password" name="newpassword" placeholder="New password" required>
+                <button type="submit">Reset Password</button>
+            </form>
+
         </li>
     {% endfor %}
 </ul>
-<a href="/admin">Back to Admin Dashboard</a>
+<a href="/admin">
+<button>Back to Admin Dashboard</button>
+</a>
+
 
 </body>
 </html>

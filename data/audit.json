@@ -736,5 +736,202 @@
             "filename": "puzzle.pdf",
             "version": 1
         }
+    },
+    {
+        "timestamp": 1776746149.6400561,
+        "username": "nesi",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776746193.619251,
+        "username": "nesi",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746214.051693,
+        "username": "nesi",
+        "action": "ADMIN_RESET_PASSWORD",
+        "document_id": null,
+        "details": {
+            "target": "alina"
+        }
+    },
+    {
+        "timestamp": 1776746214.058742,
+        "username": "nesi",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746217.432682,
+        "username": "nesi",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746222.435045,
+        "username": "nesi",
+        "action": "LOGOUT",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746235.691863,
+        "username": "alina",
+        "action": "LOGIN_FAILED",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776746241.919014,
+        "username": "alina",
+        "action": "LOGIN_SUCCESS",
+        "document_id": null,
+        "details": {
+            "ip": "127.0.0.1"
+        }
+    },
+    {
+        "timestamp": 1776746268.406975,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746275.16308,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746470.936828,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746501.625099,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746557.337385,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746558.9801931,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746560.345494,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746566.846288,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746574.370126,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746576.9576588,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746622.364573,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746623.5375118,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746627.957236,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746628.827659,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746636.474144,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746655.7433758,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746657.9115589,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746734.9781919,
+        "username": "alina",
+        "action": "ADMIN_VIEW_MANAGE_USERS",
+        "document_id": null,
+        "details": {}
+    },
+    {
+        "timestamp": 1776746736.54293,
+        "username": "alina",
+        "action": "ADMIN_DASH_ACCESS",
+        "document_id": null,
+        "details": {}
     }
 ]
