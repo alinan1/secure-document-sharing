@@ -811,19 +811,19 @@ def new_version(document_id):
 
     message = ""
     if request.method == "POST":
-        if "document" not in request.files:
-            return render_template("newversion.html", document=doc, message="No file part found.")
+        if "document" not in request.files: #check if file input exists
+            return render_template("newversion.html", document=doc, message="No file found.")
 
-        file = request.files["document"]
-        if file.filename == "":
+        file = request.files["document"] #retrieve uploaded file
+        if file.filename == "": #if file was selected
             return render_template("newversion.html", document=doc, message="Choose a file.")
 
-        if not allowed_file(file.filename):
+        if not allowed_file(file.filename): #check if file extension IS NOT allowed
             
-            return render_template("newversion.html", document=doc, message="File type not allowed. Only txt, pdf, and docx are allowed.")
+            return render_template("newversion.html", document=doc, message="File type/extension not allowed. Only txt, pdf, and docx are allowed.")
 
-        if not allowed_mime(file, file.filename):
-            log_security_event(
+        if not allowed_mime(file, file.filename): #CHECK IF FILE CONTENT DOESNT MATCH EXTENSION
+            log_security_event( 
                 "UPLOAD_FAILED",
                 username=g.user,
                 document_id=document_id,
@@ -832,30 +832,34 @@ def new_version(document_id):
             )
             return render_template("newversion.html", document=doc, message="File content does not match its extension. Upload rejected.")
 
-        og_filename = secure_filename(file.filename)
-        newversion_number = doc["version"] + 1
+        og_filename = secure_filename(file.filename) #santize file
+        newversion_number = doc["version"] + 1 #increase doc version
         stored_filename = f"{document_id}_v{newversion_number}.enc"
         file_path = os.path.join(app.config["UPLOAD_DIR"], stored_filename)
 
-        file_bytes = file.read()
-        encrypted_data = get_cipher().encrypt(file_bytes)
+        file_bytes = file.read() #read file cont into mem
+        encrypted_data = get_cipher().encrypt(file_bytes) # encrypt file
 
+        #save encypted file
         with open(file_path, "wb") as encrypted_file:
             encrypted_file.write(encrypted_data)
 
+        #start version history if already doesnt exist
         if "versions" not in doc:
             doc["versions"] = []
 
-        upload = time.time()
+        #upload = time.time()
+        #update info
         doc["version"] = newversion_number
         doc["stored_filename"] = stored_filename
         doc["original_filename"] = og_filename
-        doc["uploaded_at"] = upload
+        doc["uploaded_at"] = time.time()
 
+        #add to version history
         doc["versions"].append({
             "version_number": newversion_number,
             "stored_filename": stored_filename,
-            "uploaded_at": upload,
+            "uploaded_at": time.time(),
             "uploaded_by": g.user,
             "original_filename": og_filename
         })
